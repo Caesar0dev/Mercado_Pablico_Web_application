@@ -73,7 +73,7 @@
                         <a href="">Has olvidado tu contraseña</a>
                     </div>
                     <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Inscribirse</button>
-                    <p class="text-center mb-0">¿Ya tienes una cuenta? <a href="">Iniciar sesión</a></p>
+                    <p class="text-center mb-0">¿Ya tienes una cuenta? <a href="/signin">Iniciar sesión</a></p>
                 </div>
             </div>
         </div>
