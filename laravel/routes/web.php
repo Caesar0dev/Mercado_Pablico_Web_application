@@ -56,3 +56,31 @@ Route::get('/quote', function(){
 Route::get('/contact', function(){
     return view('contact');
 });
+
+Route::get('/dashboard', function(){
+    return view('dashboard');
+});
+
+Route::get('/dashboard/search', function(){
+    return view('search');
+});
+
+Route::get('/dashboard/follow-up', function(){
+    return view('follow-up');
+});
+
+Route::get('/dashboard/calendar', function(){
+    return view('calendar');
+});
+
+Route::get('/dashboard/reports-tenders', function(){
+    return view('tenders');
+});
+
+Route::get('/dashboard/reports-convenio', function(){
+    return view('convenio');
+});
+
+Route::get('/dashboard/configuracion', function(){
+    return view('configuracion');
+});
