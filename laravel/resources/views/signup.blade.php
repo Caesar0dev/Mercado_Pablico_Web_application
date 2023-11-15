@@ -53,18 +53,21 @@
                         </a>
                         <h3>Regístrate aquí</h3>
                     </div>
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingText" placeholder="jhondoe">
-                        <label for="floatingText">nombre de usuario</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">Dirección de correo electrónico</label>
-                    </div>
-                    <div class="form-floating mb-4">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                        <label for="floatingPassword">Contraseña</label>
-                    </div>
+                    <form action="{{ route('signup') }}" method="POST">
+                        @csrf
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingText" placeholder="jhondoe" id="name" name="name">
+                            <label for="floatingText">nombre de usuario</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" id="email" name="email">
+                            <label for="floatingInput">Dirección de correo electrónico</label>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" id="password" name="password">
+                            <label for="floatingPassword">Contraseña</label>
+                        </div>
+                    </form>
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <div class="form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">

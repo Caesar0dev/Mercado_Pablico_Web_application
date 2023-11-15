@@ -53,14 +53,16 @@
                         </a>
                         <h3>¡Bienvenido!</h3>
                     </div>
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">Correo Electrónico</label>
-                    </div>
-                    <div class="form-floating mb-4">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                        <label for="floatingPassword">Contraseña</label>
-                    </div>
+                    <form action="{{ route('signin') }}" method="POST">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email">
+                            <label for="email">Correo Electrónico</label>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+                            <label for="password">Contraseña</label>
+                        </div>
+                    </form>
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <div class="form-check">
                             <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1">

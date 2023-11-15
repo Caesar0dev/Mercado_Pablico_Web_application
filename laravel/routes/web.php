@@ -57,9 +57,12 @@ Route::get('/contact', function(){
     return view('contact');
 });
 
-Route::get('/dashboard', function(){
-    return view('dashboard');
-});
+
+
+//
+//Route::get('/dashboard', function(){
+//    return view('dashboard');
+//});
 
 Route::get('/search', function(){
     return view('search');
@@ -85,10 +88,22 @@ Route::get('/configuracion', function(){
     return view('configuracion');
 });
 
-Route::get('/signin', function(){
-    return view('signin');
-});
+//Route::get('/signin', function(){
+//    return view('signin');
+//});
+//
+//Route::get('/signup', function(){
+//    return view('signup');
+//});
 
-Route::get('/signup', function(){
-    return view('signup');
-});
+Route::get('signin', [AuthController::class, 'login'])->name('login');
+
+//Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post');
+
+Route::get('signup', [AuthController::class, 'registration'])->name('register');
+
+//Route::post('post-registration', [AuthController::class, 'postRegistration'])->name('register.post');
+
+Route::get('dashboard', [AuthController::class, 'dashboard']);
+
+Route::get('logout', [AuthController::class, 'logout'])->name('logout');
