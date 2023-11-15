@@ -23,13 +23,13 @@ class AuthController extends Controller
 
      */
 //
-//    public function index()
-//
-//    {
-//
-//        return view('auth.login');
-//
-//    }
+    public function login_index()
+
+    {
+
+        return view('signin');
+
+    }
 
 
 
@@ -43,13 +43,13 @@ class AuthController extends Controller
 
      */
 
-//    public function registration()
-//
-//    {
-//
-//        return view('auth.registration');
-//
-//    }
+    public function register()
+
+    {
+
+        return view('signup');
+
+    }
 
 
 
@@ -67,27 +67,23 @@ class AuthController extends Controller
 
     {
 
-        $request->validate([
-
-            'email' => 'required',
-
-            'password' => 'required',
-
-        ]);
-
-
+//        $request->validate([
+//
+//            'email' => 'required',
+//
+//            'password' => 'required',
+//
+//        ]);
 
         $credentials = $request->only('email', 'password');
-
         if (Auth::attempt($credentials)) {
-
             return redirect()->intended('dashboard')
 
                 ->withSuccess('You have Successfully loggedin');
 
         }
 
-        return redirect("login")->withSuccess('Oppes! You have entered invalid credentials');
+        return redirect("signin")->withSuccess('Oppes! You have entered invalid credentials');
 
     }
 
@@ -147,7 +143,7 @@ class AuthController extends Controller
 
         }
 
-        return redirect("login")->withSuccess('Opps! You do not have access');
+        return redirect("signin")->withSuccess('Opps! You do not have access');
 
     }
 

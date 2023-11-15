@@ -53,21 +53,21 @@
                         </a>
                         <h3>Regístrate aquí</h3>
                     </div>
-                    <form action="{{ route('signup') }}" method="POST">
+                    <form action="{{ url('/signuppost') }}" method="POST">
                         @csrf
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingText" placeholder="jhondoe" id="name" name="name">
-                            <label for="floatingText">nombre de usuario</label>
+                            <input type="text" class="form-control"  placeholder="jhondoe" id="name" name="name">
+                            <label for="name">nombre de usuario</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" id="email" name="email">
-                            <label for="floatingInput">Dirección de correo electrónico</label>
+                            <input type="email" class="form-control"  placeholder="name@example.com" id="email_address" name="email">
+                            <label for="email_address">Dirección de correo electrónico</label>
                         </div>
                         <div class="form-floating mb-4">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" id="password" name="password">
-                            <label for="floatingPassword">Contraseña</label>
+                            <input type="password" class="form-control"  placeholder="Password" id="password" name="password">
+                            <label for="password">Contraseña</label>
                         </div>
-                    </form>
+
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <div class="form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -77,6 +77,7 @@
                     </div>
                     <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Inscribirse</button>
                     <p class="text-center mb-0">¿Ya tienes una cuenta? <a href="/signin">Iniciar sesión</a></p>
+                    </form>
                 </div>
             </div>
         </div>

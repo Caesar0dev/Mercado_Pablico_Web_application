@@ -88,22 +88,18 @@ Route::get('/configuracion', function(){
     return view('configuracion');
 });
 
-//Route::get('/signin', function(){
-//    return view('signin');
-//});
-//
-//Route::get('/signup', function(){
-//    return view('signup');
-//});
 
-Route::get('signin', [AuthController::class, 'login'])->name('login');
 
-//Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post');
+Route::get('/signin', [\App\Http\Controllers\Auth\AuthController::class, 'login_index']);
 
-Route::get('signup', [AuthController::class, 'registration'])->name('register');
+Route::post('/signinpost', [\App\Http\Controllers\Auth\AuthController::class, 'login']);
 
-//Route::post('post-registration', [AuthController::class, 'postRegistration'])->name('register.post');
+Route::get('/signup', [\App\Http\Controllers\Auth\AuthController::class, 'register']);
 
-Route::get('dashboard', [AuthController::class, 'dashboard']);
+Route::post('/signuppost', [\App\Http\Controllers\Auth\AuthController::class, 'registration']);
 
-Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/dashboard', [\App\Http\Controllers\Auth\AuthController::class, 'dashboard']);
+
+Route::get('/logout', [\App\Http\Controllers\Auth\AuthController::class, 'logout']);
+
+

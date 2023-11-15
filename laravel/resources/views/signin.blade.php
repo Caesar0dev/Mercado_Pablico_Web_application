@@ -53,7 +53,8 @@
                         </a>
                         <h3>¡Bienvenido!</h3>
                     </div>
-                    <form action="{{ route('signin') }}" method="POST">
+                    <form action="{{ url('/signinpost') }}" method="POST">
+                        @csrf
                         <div class="form-floating mb-3">
                             <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email">
                             <label for="email">Correo Electrónico</label>
@@ -62,16 +63,16 @@
                             <input type="password" class="form-control" id="password" placeholder="Password" name="password">
                             <label for="password">Contraseña</label>
                         </div>
-                    </form>
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <div class="form-check">
-                            <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Check me out</label> -->
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <div class="form-check">
+                                <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label> -->
+                            </div>
+                            <a href="">Olvidé mi contraseña</a>
                         </div>
-                        <a href="">Olvidé mi contraseña</a>
-                    </div>
-                    <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Iniciar Sesión</button>
-                    <p class="text-center mb-0">¿No tienes una cuenta? <a href="/signup">Regístrate aquí</a></p>
+                        <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Iniciar Sesión</button>
+                        <p class="text-center mb-0">¿No tienes una cuenta? <a href="/signup">Regístrate aquí</a></p>
+                    </form>
                 </div>
             </div>
         </div>
