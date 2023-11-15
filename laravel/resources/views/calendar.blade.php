@@ -45,7 +45,7 @@
     <!-- Sidebar Start -->
     <div class="sidebar pe-4 pb-3">
         <nav class="navbar bg-secondary navbar-dark">
-            <a href="index.html" class="navbar-brand mx-4 mb-3">
+            <a href="/dashboard" class="navbar-brand mx-4 mb-3">
                 <h3 class="text-primary">Ofertaadjudicada</h3>
             </a>
             <div class="d-flex align-items-center ms-4 mb-4">
@@ -59,22 +59,22 @@
                 </div>
             </div>
             <div class="navbar-nav w-100">
-                <a href="index.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Inicio</a>
-                <a href="search.html" class="nav-item nav-link"><i class="fas fa-search me-2"></i>Búsqueda</a>
-                <a href="flow-up.html" class="nav-item nav-link"><i class="fas fa-sticky-note me-2"></i>Seguimiento</a>
-                <a href="calendar.html" class="nav-item nav-link active"><i class="fas fa-calendar me-2"></i>Calendario</a>
+                <a href="/dashboard" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Inicio</a>
+                <a href="/search" class="nav-item nav-link"><i class="fas fa-search me-2"></i>Búsqueda</a>
+                <a href="/follow-up" class="nav-item nav-link"><i class="fas fa-sticky-note me-2"></i>Seguimiento</a>
+                <a href="/calendar" class="nav-item nav-link active"><i class="fas fa-calendar me-2"></i>Calendario</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fas fa-chart-bar me-2"></i>Reportes</a>
                     <div class="dropdown-menu bg-transparent border-0">
-                        <a href="report-tenders.html" class="dropdown-item">Licitaciones</a>
-                        <a href="report-Convenio Marco.html" class="dropdown-item">Convenio Marco</a>
+                        <a href="/reports-tenders" class="dropdown-item">Licitaciones</a>
+                        <a href="/reports-convenio" class="dropdown-item">Convenio Marco</a>
                     </div>
                 </div>
-                <a href="index.html" class="nav-item nav-link"><i class="fas fa-store me-2"></i>Convenio Marco</a>
-                <a href="Configuracion.html" class="nav-item nav-link"><i class="fas fa-cog me-2"></i>Configuración</a>
-                <a href="index.html" class="nav-item nav-link"><i class="fas fa-question-circle me-2"></i>Ayunda</a>
-                <a href="index.html" class="nav-item nav-link"><i class="fas fa-cubes me-2"></i></i>Bodega</a>
-                <a href="index.html" class="nav-item nav-link"><i class="fas fa-chart-bar me-2"></i>Reportes</a>
+                <a href="/dashboard" class="nav-item nav-link"><i class="fas fa-store me-2"></i>Convenio Marco</a>
+                <a href="/configuracion" class="nav-item nav-link"><i class="fas fa-cog me-2"></i>Configuración</a>
+                <a href="/dashboard" class="nav-item nav-link"><i class="fas fa-question-circle me-2"></i>Ayunda</a>
+                <a href="/dashboard" class="nav-item nav-link"><i class="fas fa-cubes me-2"></i></i>Bodega</a>
+                <a href="/dashboard" class="nav-item nav-link"><i class="fas fa-chart-bar me-2"></i>Reportes</a>
             </div>
         </nav>
     </div>
@@ -85,7 +85,7 @@
     <div class="content">
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
-            <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
+            <a href="/dashboard" class="navbar-brand d-flex d-lg-none me-4">
                 <h2 class="text-primary mb-0"><i class="fa fa-user-edit"></i></h2>
             </a>
             <a href="#" class="sidebar-toggler flex-shrink-0">

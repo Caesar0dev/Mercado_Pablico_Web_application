@@ -61,26 +61,34 @@ Route::get('/dashboard', function(){
     return view('dashboard');
 });
 
-Route::get('/dashboard/search', function(){
+Route::get('/search', function(){
     return view('search');
 });
 
-Route::get('/dashboard/follow-up', function(){
+Route::get('/follow-up', function(){
     return view('follow-up');
 });
 
-Route::get('/dashboard/calendar', function(){
+Route::get('/calendar', function(){
     return view('calendar');
 });
 
-Route::get('/dashboard/reports-tenders', function(){
+Route::get('/reports-tenders', function(){
     return view('tenders');
 });
 
-Route::get('/dashboard/reports-convenio', function(){
+Route::get('/reports-convenio', function(){
     return view('convenio');
 });
 
-Route::get('/dashboard/configuracion', function(){
+Route::get('/configuracion', function(){
     return view('configuracion');
+});
+
+Route::get('/signin', function(){
+    return view('signin');
+});
+
+Route::get('/signup', function(){
+    return view('signup');
 });
