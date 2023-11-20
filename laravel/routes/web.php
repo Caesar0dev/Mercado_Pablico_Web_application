@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -59,37 +60,6 @@ Route::get('/contact', function(){
 
 
 
-//
-//Route::get('/dashboard', function(){
-//    return view('dashboard');
-//});
-
-Route::get('/search', function(){
-    return view('search');
-});
-
-Route::get('/follow-up', function(){
-    return view('follow-up');
-});
-
-Route::get('/calendar', function(){
-    return view('calendar');
-});
-
-Route::get('/reports-tenders', function(){
-    return view('tenders');
-});
-
-Route::get('/reports-convenio', function(){
-    return view('convenio');
-});
-
-Route::get('/configuracion', function(){
-    return view('configuracion');
-});
-
-
-
 Route::get('/signin', [\App\Http\Controllers\Auth\AuthController::class, 'login_index']);
 
 Route::post('/signinpost', [\App\Http\Controllers\Auth\AuthController::class, 'login']);
@@ -100,6 +70,21 @@ Route::post('/signuppost', [\App\Http\Controllers\Auth\AuthController::class, 'r
 
 Route::get('/dashboard', [\App\Http\Controllers\Auth\AuthController::class, 'dashboard']);
 
+Route::get('/search', [\App\Http\Controllers\Auth\AuthController::class, 'search']);
+
+Route::get('/follow-up', [\App\Http\Controllers\Auth\AuthController::class, 'follow_up']);
+
+Route::get('/calendar', [\App\Http\Controllers\Auth\AuthController::class, 'calendar']);
+
+Route::get('/reports-tenders', [\App\Http\Controllers\Auth\AuthController::class, 'reports_tenders']);
+
+Route::get('/reports-convenio', [\App\Http\Controllers\Auth\AuthController::class, 'reports_convenio']);
+
+Route::get('/configuracion', [\App\Http\Controllers\Auth\AuthController::class, 'configuracion']);
+
+Route::get('/profile', [\App\Http\Controllers\Auth\AuthController::class, 'profile']);
+
 Route::get('/logout', [\App\Http\Controllers\Auth\AuthController::class, 'logout']);
 
 
+//Auth::routes();

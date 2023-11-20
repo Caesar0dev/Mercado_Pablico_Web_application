@@ -74,7 +74,7 @@
                 <a href="/configuracion" class="nav-item nav-link"><i class="fas fa-cog me-2"></i>Configuración</a>
                 <a href="/dashboard" class="nav-item nav-link"><i class="fas fa-question-circle me-2"></i>Ayunda</a>
                 <a href="/dashboard" class="nav-item nav-link"><i class="fas fa-cubes me-2"></i></i>Bodega</a>
-                <a href="/dashboard" class="nav-item nav-link"><i class="fas fa-chart-bar me-2"></i>Reportes</a>
+                <a href="/profile" class="nav-item nav-link"><i class="fas fa-chart-bar me-2"></i>Reportes</a>
             </div>
         </nav>
     </div>
@@ -165,9 +165,9 @@
                         <span class="d-none d-lg-inline-flex">John Doe</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-                        <a href="#" class="dropdown-item">My Profile</a>
+                        <a href="{{ url('profile') }}" class="dropdown-item">My Profile</a>
                         <a href="#" class="dropdown-item">Settings</a>
-                        <a href="{{ url('/logout') }}" class="dropdown-item">Log Out</a>
+                        <a href="{{ url('logout') }}" class="dropdown-item">Log Out</a>
                     </div>
                 </div>
             </div>
@@ -319,7 +319,7 @@
                                 </div>
                             </div>
                             <div class="ms-3">
-                                <svg width="180" height="120" xmlns="http://www.w3.org/2000/svg">
+                                <svg width="120" height="120" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M 10 80 Q 32.5 10, 65 80 T 180 50" stroke="#06A3DA" fill="transparent"/>
                                 </svg>
                             </div>
@@ -336,7 +336,7 @@
                                 </div>
                             </div>
                             <div class="ms-3">
-                                <svg width="180" height="120" xmlns="http://www.w3.org/2000/svg">
+                                <svg width="120" height="120" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M 10 80 Q 32.5 10, 65 80 T 180 50" stroke="#06A3DA" fill="transparent"/>
                                 </svg>
                             </div>
@@ -353,7 +353,7 @@
                                 </div>
                             </div>
                             <div class="ms-3">
-                                <svg width="180" height="120" xmlns="http://www.w3.org/2000/svg">
+                                <svg width="120" height="120" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M 10 80 Q 32.5 10, 65 80 T 180 50" stroke="#06A3DA" fill="transparent"/>
                                 </svg>
                             </div>

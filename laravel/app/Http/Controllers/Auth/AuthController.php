@@ -5,9 +5,10 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Session;
 use App\Models\User;
-use Hash;
+//use Hash;
 
 class AuthController extends Controller
 
@@ -74,16 +75,34 @@ class AuthController extends Controller
 //            'password' => 'required',
 //
 //        ]);
-
+//        dd($request->all(), User::where('email', $request->email)->first());
         $credentials = $request->only('email', 'password');
+////        dd($credentials);
         if (Auth::attempt($credentials)) {
             return redirect()->intended('dashboard')
 
                 ->withSuccess('You have Successfully loggedin');
 
         }
+//
+//        return redirect("signin")->withSuccess('Oppes! You have entered invalid credentials');
+//        $user = User::where('email', $credentials['email'])->first();
 
-        return redirect("signin")->withSuccess('Oppes! You have entered invalid credentials');
+//        dd($user->password,$credentials['password']);
+//        dd(Hash::check($credentials['password'], $user->password),
+//            $credentials['password'],
+//            $user->password, Hash::make($credentials['password']),
+//            Hash::check($credentials['password'], Hash::make($credentials['password'])
+//        ));
+//        if (!$user || !Hash::check($credentials['password'], $user->password)) {
+//            return back()->withErrors([
+//                'email' => 'The provided credentials do not match our records.',
+//            ]);
+//        }
+//
+//        Auth::login($user);
+
+        return redirect()->intended('dashboard');
 
     }
 
@@ -136,15 +155,71 @@ class AuthController extends Controller
     public function dashboard()
 
     {
-
         if(Auth::check()){
-
             return view('dashboard');
-
         }
-
         return redirect("signin")->withSuccess('Opps! You do not have access');
+    }
 
+    public function profile(){
+        if(Auth::check()){
+            return view('profile');
+        }
+        return redirect("signin")->withSuccess('Opps! You do not have access');
+    }
+
+    public function search()
+
+    {
+        if(Auth::check()){
+            return view('search');
+        }
+        return redirect("signin")->withSuccess('Opps! You do not have access');
+    }
+
+    public function follow_up()
+
+    {
+        if(Auth::check()){
+            return view('follow-up');
+        }
+        return redirect("signin")->withSuccess('Opps! You do not have access');
+    }
+
+    public function calendar()
+
+    {
+        if(Auth::check()){
+            return view('calendar');
+        }
+        return redirect("signin")->withSuccess('Opps! You do not have access');
+    }
+
+    public function reports_tenders()
+
+    {
+        if(Auth::check()){
+            return view('tenders');
+        }
+        return redirect("signin")->withSuccess('Opps! You do not have access');
+    }
+
+    public function reports_convenio()
+
+    {
+        if(Auth::check()){
+            return view('convenio');
+        }
+        return redirect("signin")->withSuccess('Opps! You do not have access');
+    }
+
+    public function configuracion()
+
+    {
+        if(Auth::check()){
+            return view('configuracion');
+        }
+        return redirect("signin")->withSuccess('Opps! You do not have access');
     }
 
 
@@ -162,6 +237,8 @@ class AuthController extends Controller
     public function create(array $data)
 
     {
+//        dd($data['password']);
+        $password = Hash::make($data['password']);
 
         return User::create([
 
@@ -169,9 +246,10 @@ class AuthController extends Controller
 
             'email' => $data['email'],
 
-            'password' => Hash::make($data['password'])
+            'password' => $password
 
         ]);
+//        dd($password);
 
     }
 
@@ -193,7 +271,7 @@ class AuthController extends Controller
 
         Auth::logout();
 
-        return Redirect('login');
+        return Redirect('signin');
 
     }
 
