@@ -206,20 +206,20 @@
                     <div class="col-sm-12 col-xl-6">
                         <div class="bg-secondary rounded h-100 p-4">
                             <div class="d-flex justify-content-center mb-4">
-                                <img id="selectedAvatar" src="https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg"
+                                <img id="selectedAvatar" src="admin_img/avatar.png"
                                      class="rounded-circle" style="width: 200px; height: 200px; object-fit: cover;" alt="example placeholder" />
                             </div>
-                            <div class="d-flex justify-content-center">
+                            <div class="d-flex justify-content-around">
                                 <div class="btn btn-primary btn-rounded">
-                                    <label class="form-label text-white m-1" for="customFile2">Choose file</label>
+                                    <label class="form-label text-white m-1" for="customFile2" >Upload</label>
                                     <input type="file" class="form-control d-none" id="customFile2" onchange="displaySelectedImage(event, 'selectedAvatar')" />
                                 </div>
+                                <button type="button" class="btn btn-primary" onclick="imagedelete()">Remove</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-12 col-xl-6">
                         <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">Horizontal Form</h6>
                             <form>
                                 <div class="row mb-3">
                                     <label for="name" class="col-sm-2 col-form-label">Name</label>
@@ -272,6 +272,34 @@
                                                 <option>San Diego Chargers</option>
                                         </select>
                                     </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-secondary rounded h-100 p-4">
+                            <form>
+                                <div class="row mb-3">
+                                    <label for="current_pw" class="col-sm-5 col-form-label">Current Password</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" class="form-control" id="current_pw">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="new_pw" class="col-sm-5 col-form-label">New Password</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" class="form-control" id="new_pw">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="confirm_pw" class="col-sm-5 col-form-label">Confirm Password</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" class="form-control" id="confirm_pw">
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-around">
+                                    <button type="button" class="btn btn-primary m-1">Edit</button>
+                                    <button type="button" class="btn btn-primary">Save</button>
                                 </div>
                             </form>
                         </div>
@@ -335,6 +363,12 @@
 
             reader.readAsDataURL(fileInput.files[0]);
         }
+    }
+
+    function imagedelete(){
+        // const user_image = document.getElementById(selectedAvatar);
+        console.log(document.getElementById(selectedAvatar));
+
     }
 
 </script>

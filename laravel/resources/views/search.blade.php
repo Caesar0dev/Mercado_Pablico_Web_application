@@ -203,28 +203,28 @@
                 <div class="table-responsive">
                     <table id="Oportunidades-destacadas" class="table">
                         <thead>
-                        <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Organismo</th>
-                            <th scope="col">Tipo</th>
-                            <th scope="col">Región</th>
-                            <th scope="col">Monto disponible</th>
-                            <th scope="col">Cierre</th>
-                            <th scope="col">Publicación</th>
-                        </tr>
+                            <tr>
+                                <th scope="col" class="col-sm-2">ID</th>
+                                <th scope="col" class="col-sm-10">Project Title</th>
+                            </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <th scope="row"></th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><a href="#">I am looking for a Fullstack Developer</a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><a href="#">I am looking for a Fullstack Developer</a></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><a href="#">I am looking for a Fullstack Developer</a></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><a href="#">I am looking for a Fullstack Developer</a></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
