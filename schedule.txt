@@ -1,0 +1,3 @@
+12/13: 	- convert from ai.js to ai.php
+	- integrate ai.php to application
+	- capture video
