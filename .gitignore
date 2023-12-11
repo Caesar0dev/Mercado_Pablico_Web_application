@@ -1,0 +1,12 @@
+
+# dependencies
+/AI/node_modules
+/scrape/node_modules
+
+# package
+/AI/package-lock.json
+/scrape/package-lock.json
+
+
+# production
+

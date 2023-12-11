@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "json2csv": "^6.0.0-alpha.2",
+    "puppeteer": "^21.5.1",
+    "xpath": "^0.0.33"
+  }
+}
