@@ -183,7 +183,7 @@
             }
         </style>
         <div class="container-fluid pt-4 px-4">
-            <div class="bg-secondary text-center rounded p-4" style="height: 524px;">
+            <div class="bg-secondary text-center rounded p-4" >
                 <style>
                     th {
                         color: white;
@@ -198,35 +198,28 @@
                         <h3 class="mb-0 me-2">Búsqueda | </h3>
                         <h6 class="mb-0">Oportunidades disponibles para adjudicación según tu configuración.</h6>
                     </div>
-                    <a href="">Show All</a>
+                    <a href="">mostrar todo</a>
                 </div>
                 <div class="table-responsive">
                     <table id="Oportunidades-destacadas" class="table">
                         <thead>
                             <tr>
-                                <th scope="col" class="col-sm-2">ID</th>
-                                <th scope="col" class="col-sm-10">Project Title</th>
+                                <th scope="col" class="col-sm-2">ID Licitación</th>
+                                <th scope="col" class="col-sm-10">Título del Proyecto</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td><a href="#">I am looking for a Fullstack Developer</a></td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td><a href="#">I am looking for a Fullstack Developer</a></td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td><a href="#">I am looking for a Fullstack Developer</a></td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td><a href="#">I am looking for a Fullstack Developer</a></td>
-                            </tr>
+                            @foreach($projects as $project)
+                                <tr>
+                                    <th scope="row">{{ $project->num }}</th>
+                                    <td><a href="{{ route('project',['id' => $project->id]) }}" class="text-white"> {{ $project->title }}</a></td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
+                    <div class="d-flex justify-content-end">
+                        {!! $projects->links() !!}
+                    </div>
                 </div>
             </div>
 

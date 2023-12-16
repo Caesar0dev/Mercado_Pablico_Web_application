@@ -275,4 +275,8 @@ class AuthController extends Controller
 
     }
 
+    public function scrap(Request $request){
+        dd($request);
+    }
+
 }

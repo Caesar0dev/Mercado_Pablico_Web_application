@@ -17,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Route::get('/scrapedData', [\App\Http\Controllers\ScrapeController::class, 'scrap_data'])->name('scrapeddata');
+Route::post('/scrapedData', [\App\Http\Controllers\ScrapeController::class, 'scrap_data'])->name('scrapeddata');
