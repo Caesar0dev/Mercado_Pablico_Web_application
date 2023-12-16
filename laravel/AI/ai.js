@@ -21,5 +21,3 @@ const title = `Web Development Project Proposal`;
 const jobDetails = `I am seeking a freelancer to help me create a simple 'mad-libs word game' webpage. Languages will be used: HTML, CSS, and Javascript. Examples; https://gr2m.github.io/Mad-Libs-Forms/ https://www.madtakes.com/libs/187.html I will share the details once you bid.`;
 const content = requestLinkedin(title, jobDetails, instructions);
 // console.log(content);
-
-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
