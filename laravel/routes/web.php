@@ -84,6 +84,15 @@ Route::get('/configuracion', [\App\Http\Controllers\Auth\AuthController::class, 
 
 Route::get('/profile', [\App\Http\Controllers\Auth\AuthController::class, 'profile']);
 
+Route::get('/search', [\App\Http\Controllers\ProjectsController::class, 'index']);
+
+Route::get('/project/{id}', [\App\Http\Controllers\ProjectsController::class, 'project_show']) ->name('project');
+
+Route::post('/project/{id}', [\App\Http\Controllers\AIcontroller::class, 'AIpost']) ->name('aipost');
+
+// Route::post('/request-linkedin', 'LinkedInController@requestLinkedIn')->name('request.linkedin');
+
+
 Route::get('/logout', [\App\Http\Controllers\Auth\AuthController::class, 'logout']);
 
 
